@@ -1,0 +1,91 @@
+Finalize Project Scope: Decide on the absolute minimum features for your MVP. Don't add any "nice-to-have" features yet. For example, a simple command-line interface is perfectly acceptable.
+
+Choose Technologies:
+
+Database
+API: Select a free, easy-to-use stock data API (e.g., Alpha Vantage).
+
+Programming Language: Python is highly recommended due to its rich ecosystem of libraries.
+
+Design the Database Schema:
+
+Create a simple ER diagram for your Users, Stocks, and Watchlist (or a similar linking table).
+
+Write the CREATE TABLE statements for these tables in SQL.
+
+Days 4-7: Implementation - Part 1
+
+Set up the Project: Create your project directory and set up a basic Python script.
+
+API Integration:
+
+Write a function to fetch the current stock price for a given ticker.
+
+Write a function to fetch historical data for a specific date.
+
+Test these functions independently to ensure they work correctly.
+
+Database Connection:
+
+Write the code to connect to your SQLite database.
+
+Create the tables you designed in step 3.
+
+User Management (Basic):
+
+Create a function to register a new user (simple username/password, maybe not even a password hash for the MVP).
+
+Create a function to "log in" a user (again, a simple check).
+
+Watchlist Functionality:
+
+Write a function to add a stock to a user's watchlist.
+
+Write a function to display the stocks in a user's watchlist.
+
+Week 2: Analysis, Interface, and Final Touches
+Days 8-11: Implementation - Part 2
+
+Historical Price Lookup and Storage:
+
+When a user looks up a historical price for a stock, first check if you already have it in your database.
+
+If not, fetch it from the API and store it in your database before displaying it. This will save API calls and make subsequent lookups faster.
+
+Price Comparison Logic:
+
+Write a function that takes a ticker and a historical date.
+
+Inside this function, get the historical price (from the database) and the current price (from the API).
+
+Calculate the absolute difference and the percentage change.
+
+Command-Line Interface (CLI):
+
+Create a simple menu-driven interface.
+
+Options should include: "Login/Register", "Look up Stock Price", "View Watchlist", "Add Stock to Watchlist", "Analyze Price Change".
+
+Tie all your backend functions to these menu options.
+
+Days 12-14: Testing and Submission Preparation
+
+Thorough Testing:
+
+Go through all the menu options and test every piece of functionality.
+
+Test edge cases, like an invalid stock ticker or a date far in the past.
+
+Write the Project Report:
+
+Document your database schema, design choices, and the technologies you used.
+
+Explain how your project fulfills the requirements of the BCSE302L curriculum.
+
+Include a user guide and sample output from your program.
+
+Final Code Review:
+
+Clean up your code, add comments, and ensure it's easy to read.
+
+Prepare your final submission package.
