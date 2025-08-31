@@ -1,8 +1,62 @@
 Finalize Project Scope: Decide on the absolute minimum features for your MVP. Don't add any "nice-to-have" features yet. For example, a simple command-line interface is perfectly acceptable.
+/
+// 
+///
+////
+/////
+//////
+///////
+////////
 
+The "Extravagant" MVP: Stock Price Analyzer
+This project will be a command-line application that feels professional and feature-rich, without adding complex web development or machine learning.
+Core Functionality (The "Doable" Part)
+User Authentication:
+User Registration: Allow a new user to sign up with a username. A simple password (not necessarily a hashed one for this deadline) is sufficient.
+User Login: Authenticate a returning user. The application will remember the logged-in user for the session.
+
+Stock Data Lookup:
+Single Stock Lookup: Allow the user to input a stock ticker (e.g., AAPL). The application will retrieve and display the stock's most recent closing price.
+Historical Lookup: Allow the user to input a specific past date. The application will fetch and display the closing price for that day.
+Smart Caching: When a historical price is fetched from the API, it will be stored in your database. Subsequent requests for the same stock on the same date will retrieve the data from the database, reducing API calls and improving speed. This demonstrates excellent database design and efficiency.
+
+Price Analysis:
+Comparative Analysis: The user can compare a historical price to the current price. The application will calculate and display:
+The absolute difference in price.
+The percentage change.
+Aesthetic Output: Instead of just printing numbers, the output will be formatted nicely. Use color-coded text (e.g., green for positive change, red for negative change) and clear labels.
+
+Watchlist Management:
+Add to Watchlist: Users can add a stock ticker to their personal watchlist.
+View Watchlist: The application will display a list of all stocks the logged-in user is watching.
+Quick Analysis: When viewing the watchlist, the application will not just show the tickers, but will also perform a quick check and display the current price and the day's percentage change for each stock. This is a very valuable and clean feature.
+
+"Extravagant" Touches (The "Clean" Part)
+Aesthetic Command-Line Interface (CLI):
+Main Menu: The application will greet the user with a well-formatted menu of options.
+Clear Prompts: Use clear, descriptive prompts for user input (e.g., "Enter stock ticker:" instead of just ":").
+Formatted Output: All output will be presented in a clean, easy-to-read format with headers and proper spacing. Use a library like colorama for a simple and effective way to add color to your text.
+
+Error Handling:
+Polite Errors: Instead of crashing, the program will handle common errors gracefully. For example:
+If a ticker is not found, print a message like "Ticker 'XYZ' not found. Please try again."
+If the API call fails, inform the user about the issue.
+If a date has no historical data, let the user know.
+
+Structured Database Design:
+Your database will have three clean, normalized tables: Users, Stocks, and Watchlist_Items (a join table). The structure will be logical and easy to understand. This demonstrates a strong grasp of the BCSE302L concepts.
+By focusing on these features, you will have a project that is not only functional but also looks and feels professional. The "extravagant" part comes from the polished UI and thoughtful features like the quick watchlist analysis and smart caching, which show a deeper understanding of software design beyond just fulfilling the basic requirements.
+/
+// 
+///
+////
+/////
+//////
+///////
+////////
 Choose Technologies:
 
-Database
+Database : *MYSQL*
 API: Select a free, easy-to-use stock data API (e.g., Alpha Vantage).
 
 Programming Language: Python is highly recommended due to its rich ecosystem of libraries.
