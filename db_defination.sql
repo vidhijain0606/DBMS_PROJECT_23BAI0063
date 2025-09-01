@@ -64,3 +64,13 @@ SELECT * FROM stock;
 -- This should show all 5 stocks you loaded.
 SELECT COUNT(*) FROM historical_prices;
 -- This should now show a very large number (e.g., 30,000+).
+
+DESCRIBE users;
+ALTER TABLE users MODIFY COLUMN user_id INT AUTO_INCREMENT;
+ALTER TABLE user_stocklist DROP FOREIGN KEY fk_list_to_user;
+ALTER TABLE users MODIFY COLUMN user_id INT AUTO_INCREMENT;
+ALTER TABLE user_stocklist ADD CONSTRAINT fk_list_to_user
+FOREIGN KEY (user_id) REFERENCES users(user_id)
+ON DELETE CASCADE;
+SELECT * FROM users;
+SELECT * FROM user_stocklist;
